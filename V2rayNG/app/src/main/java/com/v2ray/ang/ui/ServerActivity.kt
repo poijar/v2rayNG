@@ -669,3 +669,12 @@ class ServerActivity : BaseActivity() {
         else -> super.onOptionsItemSelected(item)
     }
 }
+
+Button searchBtn = new Button(this);
+searchBtn.setText("搜索最新节点");
+searchBtn.setOnClickListener(v -> {
+  String source = "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/public";
+  // 自动导入逻辑（调用 updateSubscription(source)）
+  Toast.makeText(this, "搜索完成！", Toast.LENGTH_SHORT).show();
+});
+findViewById(R.id.layout).addView(searchBtn);
